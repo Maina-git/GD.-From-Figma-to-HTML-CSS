@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+
+# production build
+dist/
+
+# dotenv environment variables
+.env
+.env.*
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS system files
+.DS_Store
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# lock files (optional, if you use only one)
+package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

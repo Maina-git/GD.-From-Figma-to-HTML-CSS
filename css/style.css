@@ -1,0 +1,490 @@
+/* Variable colors from figma */
+:root{
+    --orange-color:#DA722C;
+    --dark-blue-color:#16232e;
+    --dark-color:#070917;
+    --light-color:#E8F7FB;
+    --light-blue-color:#6F7DFB;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    font-family:"Poppins", sans-serif;
+}
+
+.btn{
+    padding:16px 32px;
+    border-radius:24px;
+    color:white;
+    display:inline-block;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+   position:relative;
+}
+
+/*wrapper*/
+.wrapper{
+    max-width:1134px;
+    margin:0 auto;
+}
+
+/* buttons */
+.btn,dark{
+    background:var(--dark-blue-color);
+}
+.btn.light{
+    background:var(--orange-color);
+}
+.btn.enrol-icon::before{
+content:url("images/PencilAlt.svg");
+position:absolute;
+top:50%;
+left:32px;
+transform:translateY(-50%)
+}
+.btn.enrol-icon{
+  padding-left:60px  
+}
+
+
+/* header */
+header {
+   background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+   height: 100vh;
+   width: 100%;
+}
+
+nav{
+    display:flex;
+    position:fixed;
+    justify-content:space-between;
+    align-items:center;
+    width:1134px;
+    top:36px;
+    z-index:100;
+}
+nav .logo{
+    color:#ffffff;
+    font-family:"Raleway" sans-serif;
+    font-style:normal;
+    font-weight:900;
+    font-size:40px;
+    line-height:47px;
+}
+nav ul{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    list-style:none;
+   margin:0;
+}
+nav ul li a{
+    font-family:"Poppins", sans-serif;
+    font-weight:bold;
+    font-size:16px;
+    color:#ffff;
+    text-decoration:none;
+}
+
+/* hero section */
+.hero-section{
+    display:flex;
+    height:100vh;
+    width:100%;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:60px;
+}
+.hero-section .left{
+    width:457px;
+}
+
+.hero-section .left h1{
+    font-family:"Raleway", sans-serif;
+    font-weight:900;
+    font-size:50px;
+    line-height:125%;
+    color:white;
+    margin-bottom:0;
+}
+
+.hero-section .left p{
+font-family:"Poppins", sans-serif;
+font-weight:normal;
+font-size:16px;
+line-height:200%;
+color:white;
+}
+
+.hero-section .right{
+    align-self: flex-end;    
+}
+
+.hero-section .right img{
+    height:520px;
+   vertical-align:flex-end;
+}
+
+.achievement-card{
+display:none;
+}
+
+.achievement-card .bg{
+    position:absolute;
+    height:100%;
+    height:100%;
+    background:linear-gradient(180deg, #617dfb 0%, #3b448f 100%);
+}
+section {
+  margin-top: 100px;
+}
+
+/* Section container layout */
+.testimonials-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  align-items:center;
+}
+
+/* Heading */
+.testimonials-section .right h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+  color: var(--dark-blue-color);
+}
+
+/* Paragraphs */
+.testimonials-section .right p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height:200px;
+  line-height: 1.6;
+  color: var(--dark-blue-color);
+  margin: 12px 0;
+}
+
+/* Testimonials container (left side) */
+.testimonials-section .left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Testimonial card */
+.testimonials-section .testimonial-card {
+  width: 442px;
+  background-color: white;
+  box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Decorative bar */
+.testimonials-section .testimonial-card::before{
+  content: "";
+  width: 28px;
+  height: 40px;
+  background-color: var(--dark-color);
+  position: absolute;
+  top: -40px;
+  left: 60px;
+  border-radius: 24px 24px 0 0;
+}
+
+.testimonials-section .testimonial-card:last-child::before{
+  left: 40px;
+  top: -50px;
+  border-radius: 0 0 24px 24px;
+  height: calc(100% + 90px);
+  z-index: -1;
+}
+
+/* Card content */
+.testimonials-section .testimonial-card .content {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.5;
+  color: white;
+  padding: 24px 32px;
+  border-radius: 24px;
+  background-color: var(--light-blue-color);
+}
+
+/* Alternate card color */
+.testimonials-section .testimonial-card:last-child .content {
+  background-color: var(--orange-color);
+}
+
+/* Info section */
+.testimonials-section .testimonial-card .info {
+  padding: 24px 32px;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.testimonials-section .testimonial-card .info h4 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  margin: 0;
+  color: var(--dark-blue-color);
+  line-height: 120px;
+}
+
+.testimonials-section .testimonial-card .info p.company {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: var(--dark-blue-color);
+  line-height:20px; 
+  margin: 4px 0 0;
+}
+
+.testimonials-section .testimonial-card img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 32px;
+  bottom: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonials-section .testimonial-card:last-child {
+  transform: translateX(20px);
+}
+
+.testimonials-section .features {
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.btn.light {
+  background-color:var(--orange-color);
+  color:var(--light-color);
+}
+
+/* Hide mobile button on desktop */
+.testimonials-section .mobile-btn {
+  display: none;
+}
+
+/*courses section */
+
+.courses-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+ background:linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+
+.courses-section .wrapper {
+    max-width: 1200px; /* or your site's wrapper width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.courses-section h2{
+  text-align:center;
+  font-size:50px;
+}
+
+.courses-section .course-cards {
+display:flex;
+gap:70px;
+}
+
+.courses-section .course-cards img{
+  width:100%;
+  filter:drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+  border-radius:24px;
+}
+.courses-section .course-card{
+  background:white;
+  border-radius:24px;
+  padding:0 32px;
+  margin:40px 0;
+  position:relative;
+}
+
+.courses-section .course-card::after{
+  content:"";
+  height:8px;
+  left:32px;
+right:32px;
+bottom:0;
+  background:var(--dark-blue-color);
+  border-radius:24px;
+  position:absolute;
+}
+
+.courses-section .course-card  h3{
+ font-family:"Raleway", sans-serif;
+ font-weight:900;
+ font-size:30px;
+ line-height:150%;
+ color:var(--dark-blue-color);
+}
+.courses-section .course-card  .info{
+display:flex;
+gap:16px;
+justify-content: space-between;
+align-items: center;
+}
+.courses-section .course-card  .duration{
+font-family:"Raleway", sans-serif;
+font-weight:900;
+font-size:16px;
+line-height:150%;
+color:var(--dark-blue-color);
+white-space: nowrap;
+position:relative;
+padding-left:10px;
+}
+.course-cards .course-card .duration::before {
+content:url("images/clock.svg");
+position:absolute;
+top:2px;
+left:-6px;
+}
+
+.courses-section .wrapper .btn{
+  position:absolute;
+  right:0;
+}
+
+/*app section */
+.app-section{
+  text-align:center;
+
+}
+.app-section .app-buttons{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:24px;
+}
+.app-section .app-btn{
+  padding:20px 32px;
+  background:var(--dark-color);
+  color:var(--light-color);
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-width:310px;
+}
+.app-section .app-btn span{
+  font-family:"Poppins", sans-serif;
+  font-weight:normal;
+  font-size:20px;
+  color:var(--light-color);
+}
+/*  footer */
+footer{
+    background:var(--dark-color);
+    color:var(--light-color);
+    padding:70px 0;
+    margin-top:100px;
+}
+footer a{
+  text-decoration: none;
+  color:var(--light-color);
+
+}
+
+footer h3{
+  color:var(--orange-color);
+  font-family:"Raleway", sans-serif;
+}
+footer ul{
+  list-style:none;
+  padding-left:20px;
+}
+footer ul li{
+  margin:16px 0;
+}
+
+footer .links-container{
+  display:grid;
+  grid-template-columns: 2fr 2fr 3fr;
+}
+
+footer .social{
+  margin-left:20px;
+
+}
+footer .social a{
+  margin-right:28px;
+}
+
+footer form {
+  margin-left:20px;
+  margin-top:16px;
+  position:relative;
+}
+footer form input{
+  font-family:"Poppins", sans-serif;
+  font-weight:normal;
+  font-size:16px;
+  line-height:200%;
+  color:var(--dark-color);
+  border-radius:8px;
+  padding:8px 32px;
+  border:none;
+  width:100%;
+}
+footer form .submit-btn{
+  position:absolute;
+  right:5px;
+  top:50%;
+  transform: translateY(-50%);
+  background:var(--orange-color);
+  color:var(--light-color);
+  border:none;
+  padding:8px 16px;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+  font-weight:normal;
+  border:0;
+}
+
+footer .copyright{
+margin-top:36px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
