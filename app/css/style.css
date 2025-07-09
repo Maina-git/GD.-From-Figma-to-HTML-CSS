@@ -68,7 +68,20 @@ nav{
     width:1134px;
     top:36px;
     z-index:100;
+    top:0;
+    padding:36px 0;
 }
+
+nav.scrolled{
+background:var(--dark-blue-color);
+box-shadow:0 16px 14px -8px rgba(0, 0, 0, 0.3);
+border-radius:0 0 8px 8px;
+top:0;
+padding:12px;
+transition:all 500ms ease;
+}
+
+
 nav .logo{
     color:#ffffff;
     font-family:"Raleway" sans-serif;
@@ -104,7 +117,6 @@ nav ul li a{
 .hero-section .left{
     width:457px;
 }
-
 .hero-section .left h1{
     font-family:"Raleway", sans-serif;
     font-weight:900;
@@ -428,7 +440,7 @@ footer ul li{
   margin:16px 0;
 }
 
-footer .links-container{
+footer .container{
   display:grid;
   grid-template-columns: 2fr 2fr 3fr;
 }
@@ -477,14 +489,153 @@ footer .copyright{
 margin-top:36px;
 }
 
+.mobile{
+  display:none;
+}
 
 
 
+.mobile-logo{
+    display:none;
+}
+
+.menutoggle{
+  display:none;
+}
 
 
 
+@media (max-width: 767px){
+  .scrolled{
+    display:none;
+  }
+ 
+   .desktop {
+    display:none;
+  } 
+
+.mobile-logo{
+  display:block;
+  position:absolute;
+  left:10px;
+  top:10px;
+  font-size:50px;
+  font-weight:bold;
+  color:var(--light-color);
+}
 
 
+.menutoggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position:absolute;
+    right:10px;
+    top:10px;
+    z-index:100;
+}
+
+.mobile{
+display:none;
+background:var(--dark-blue-color);
+height:100vh;
+position:relative;
+top:0;
+width:100%;
+z-index:100;
+align-items: center;
+justify-content: center;
+}
+
+   .mobile .logo{
+    font-size: 50px;
+    font-weight: 900;
+    position:absolute;
+    top:10px;
+    left:10px;
+    color: var(--light-color);
+    margin-left: 20px;
+   }
+
+.mobile ul{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  gap:30px;
+}
+.mobile ul li{
+    margin: 10px 0;
+    list-style:none;
+}
+.mobile ul li a{
+  font-size:20px;
+  text-decoration: none;
+  color:var(--light-color);
+  font-weight:normal;
+  font-size:20px;
+}
+.mobile ul li a.btn-mobile{
+  padding: 12px 24px;
+  font-size: 18px;
+  background:var(--orange-color);
+  border-radius:20px;
+}
+
+
+
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-section .left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-section .right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .testimonials-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials-section .left, 
+    .testimonials-section .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .testimonials-section .testimonial-card {
+        width: 100%;
+    }
+
+    .courses-section .course-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   .app-section .app-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+footer .container{
+  display:flex;
+  flex-direction:column;
+  margin:10px;
+}
+
+    footer form {
+        width: 70%;
+    }
+}
 
 
 
